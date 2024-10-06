@@ -5,7 +5,7 @@ macro_rules! float_impl {
         #[derive(
             Clone, Copy, Add, AddAssign, Div, DivAssign, From, Into, Mul, MulAssign, Sub, SubAssign,
         )]
-        pub struct $name($typ);
+        pub struct $name(pub $typ);
 
         impl Ord for $name {
             fn cmp(&self, other: &Self) -> std::cmp::Ordering {
