@@ -3,7 +3,19 @@ use derive_more::{Add, AddAssign, Div, DivAssign, From, Into, Mul, MulAssign, Su
 macro_rules! float_impl {
     ($name:ident, $typ:ty) => {
         #[derive(
-            Clone, Copy, Add, AddAssign, Div, DivAssign, From, Into, Mul, MulAssign, Sub, SubAssign,
+            Clone,
+            Copy,
+            Add,
+            AddAssign,
+            Div,
+            DivAssign,
+            From,
+            Into,
+            Mul,
+            MulAssign,
+            Sub,
+            SubAssign,
+            Debug,
         )]
         pub struct $name(pub $typ);
 
